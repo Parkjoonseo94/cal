@@ -1,0 +1,143 @@
+/* 모든 요소의 기본 여백 제거 */
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+/* HTML과 Body의 기본 설정 */
+html, body {
+height: 100%;
+}
+
+body { /* 화면 속 계산기 위치를 중앙으로 */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.calculator-container,
+.display,
+.buttons {
+  border: 2px solid ;
+  display: flex;
+  padding: 0px 10px
+}
+
+.calculator-container {
+  border-color: green;
+  height: 640px;
+  min-height: 640px;
+  width: 480px;
+  min-width: 480px;
+  padding: 20px;
+  flex-direction: column;
+  background-color: rgb(63, 63, 63);
+  /* 계산기 내부의 영역을 세로로 정렬 */
+}
+
+.topBtC {
+  height: 5%;
+  width: 20%;
+  align-items: center;
+  display: flex;
+  justify-content: space-around;
+}
+
+.TB { /* 맨 위의 버튼들 공통 속성 */
+  border: none;
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+}
+
+.topBt1 { /* 버튼별 색상 */
+  background-color: #ff5f67;
+}
+.topBt1:hover {
+  background-color: #CF5f67;
+}
+.topBt2 {
+  background-color: #febc2e;
+}
+.topBt2:hover {
+  background-color: #bead2c;
+}
+.topBt3 {
+  background-color: #28c841;
+}
+.topBt3:hover {
+  background-color: #118f32;
+}
+
+.state {
+  display: flex;
+  border: none;
+  color: rgba(255, 255, 255, 0.763);
+  background-color: gray;
+  justify-content: end;
+  align-items: center;
+  font-size: 1rem;
+  padding-right: 10px;
+}
+
+.display /* 우측으로 내용 정렬, 패딩 10px */ {
+  border: none;
+  color: rgba(255, 255, 255, 0.763);
+  background-color: gray;
+  display: flex; /* 디스플레이를 플렉스박스로 지정 */
+  height: 12%;
+  width: auto;
+  max-width: 440px;
+  margin-top: 0;
+  margin-bottom: 20px;
+  padding: 10px;
+  gap: 5px;
+  justify-content: end;
+  align-items: center;
+  font-size: 3rem;
+}
+
+.buttons /* 버튼들의 간격, 위치 조정 */{
+  display: flex; /* 디스플레이 플렉스 지정 */
+  flex-wrap: wrap;
+  justify-content: space-between;
+  border: none;
+  background-color: rgba(169, 169, 169, 0.184);
+  padding: 10px;
+  height: 75%;
+  width: 100%;
+  max-width: 440px;
+}
+
+.button /* 모든버튼 공통 크기 */ {
+  font-size: 1.5rem; /* 버튼 폰트크기 확대 */
+  width: 23%;
+  margin: 0 1%;
+  height: 80px;
+  border: none;
+  border-radius: 5px;
+  padding: 5px;
+}
+
+.zero /* 0번 버튼만 가로크기가 더큼 */ {
+  flex-grow: 2;
+}
+
+.number /* 넘버버튼 컬러 */{
+  background-color: lightgray;
+  }
+
+.operator, /* + - X ÷ 버튼 */
+.function/* C, ±, % 버튼 */ { 
+  background-color: gray;
+  }
+
+.button:hover /* 마우스 올리면 색바뀜 */{
+  background-color: darkgray;
+}
+
+.button:active /* 클릭시 이벤트 */{
+  background-color: rgb(69, 69, 69);
+  color: rgb(184, 184, 184);
+}
