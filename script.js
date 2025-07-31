@@ -205,3 +205,4 @@ let cal = function(num1, num2, oper) {
             const dNum = parseFloat(display.textContent)
             display.textContent = firstOperand / 100 * dNum;
           })
+          
